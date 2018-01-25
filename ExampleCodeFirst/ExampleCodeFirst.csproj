@@ -51,8 +51,13 @@
   <ItemGroup>
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\EFContext.cs" />
+    <Compile Include="Entities\FilterName.cs" />
+    <Compile Include="Entities\Filters.cs" />
+    <Compile Include="Entities\FilterValue.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderStatus.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\UserProfile.cs" />
     <Compile Include="Migrations\201801241838061_add table.cs" />
     <Compile Include="Migrations\201801241838061_add table.Designer.cs">
@@ -61,6 +66,14 @@
     <Compile Include="Migrations\201801241852032_add table Orders and OrdersStatus.cs" />
     <Compile Include="Migrations\201801241852032_add table Orders and OrdersStatus.Designer.cs">
       <DependentUpon>201801241852032_add table Orders and OrdersStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801251650123_add tbl Roles.cs" />
+    <Compile Include="Migrations\201801251650123_add tbl Roles.Designer.cs">
+      <DependentUpon>201801251650123_add tbl Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801251729561_Add table Filters.cs" />
+    <Compile Include="Migrations\201801251729561_Add table Filters.Designer.cs">
+      <DependentUpon>201801251729561_Add table Filters.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -78,6 +91,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801241852032_add table Orders and OrdersStatus.resx">
       <DependentUpon>201801241852032_add table Orders and OrdersStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801251650123_add tbl Roles.resx">
+      <DependentUpon>201801251650123_add tbl Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801251729561_Add table Filters.resx">
+      <DependentUpon>201801251729561_Add table Filters.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

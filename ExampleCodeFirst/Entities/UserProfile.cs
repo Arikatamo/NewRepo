@@ -11,6 +11,10 @@ namespace ExampleCodeFirst.Entities
     [Table("tblUserProfiles")]
     public class UserProfile
     {
+        public UserProfile()
+        {
+            Roles = new HashSet<Role>();
+        }
         [Key]
         public int Id { get; set; }
         [Required]
@@ -24,5 +28,7 @@ namespace ExampleCodeFirst.Entities
         public string Telephone { get; set; }
         public virtual Cart CartOf { get; set; }
         public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Role> Roles { get; set; }
+
     }
 }

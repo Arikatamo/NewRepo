@@ -26,11 +26,19 @@ namespace MyEntityFramework
             InitializeComponent();
             using (EFContext context = new EFContext())
             {
-
-                foreach (var item in context.OrderStatus.ToList())
+                try
                 {
-                    OrderStatuses.Items.Add(item.Name);
+                    foreach (var item in context.OrderStatus.ToList())
+                    {
+                        OrderStatuses.Items.Add(item.Name);
+                    }
                 }
+                catch (Exception)
+                {
+
+     
+                }
+
                // OrderStatuses.ItemsSource = temp as List<OrderStatus>;
       
              

@@ -15,6 +15,6 @@ namespace ExampleCodeFirst.Entities
         public int UserProfileId { get; set; }
         public DateTime DateCreate { get; set; }
         public virtual UserProfile UserProfileOf { get; set; }
-        int a;
+   
     }
 }

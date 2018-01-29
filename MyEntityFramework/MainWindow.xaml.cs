@@ -1,4 +1,5 @@
 ﻿using ExampleCodeFirst.Entities;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,30 +20,11 @@ namespace MyEntityFramework
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
             InitializeComponent();
-            using (EFContext context = new EFContext())
-            {
-                try
-                {
-                    foreach (var item in context.OrderStatus.ToList())
-                    {
-                        OrderStatuses.Items.Add(item.Name);
-                    }
-                }
-                catch (Exception)
-                {
-
-     
-                }
-
-               // OrderStatuses.ItemsSource = temp as List<OrderStatus>;
-      
-             
-            }
         }
 
         private void btnAddUser_Click(object sender, RoutedEventArgs e)
@@ -78,15 +60,43 @@ namespace MyEntityFramework
                     OrderS.ItemsSource = context.OrderStatus.ToList();
                 
                 }
-        }
+                if (item.Name.ToString() == "Filters")
+                {
+                    FiltersValueGrid.ItemsSource = context.FilterValue.ToList();
+                    FiltersGrid.ItemsSource = context.FilterName.ToList();
+                    Products.ItemsSource = context.Products.ToList();
+                }
+            }
 
 
         }
 
         private void Statuses_Click(object sender, RoutedEventArgs e)
         {
-            AddStatuses addStatuses = new AddStatuses();
-            addStatuses.ShowDialog();
+            var checker = sender as Button;
+            if (checker.Name == "Statuses")
+            {
+                AddStatuses addStatuses = new AddStatuses();
+                addStatuses.ShowDialog();
+            }
+
+            if (checker.Name == "AddSFilters")
+            {
+                AdminFilter filters = new AdminFilter();
+                filters.ShowDialog();
+            }
+
+        }
+
+        private void StausesGrid_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+
+        }
+
+        private void ProductClick(object sender, RoutedEventArgs e)
+        {
+            Product prod = new Product();
+            prod.ShowDialog();
         }
     }
 }

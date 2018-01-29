@@ -8,17 +8,23 @@
         Title="AdminFilter" Height="300" Width="401.667">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="29*"/>
-            <RowDefinition Height="61*"/>
+            <RowDefinition Height="87"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="83*"/>
-            <ColumnDefinition Width="114*"/>
+            <ColumnDefinition Width="166*"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="89*"/>
         </Grid.ColumnDefinitions>
         <StackPanel>
             <Label Content="Назва Фільтру" Margin="2"/>
-            <TextBox x:Name="FilterName" Height="23" TextWrapping="Wrap" Text="FilterName" Margin="2"/>
-            <Button Content="AddFilterName" Margin="2"/>
+            <TextBox x:Name="FilterName" TextWrapping="Wrap" Text="FilterName" Height="25"/>
+            <Button Content="AddFilterName" Click="Button_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Label Content="Значення для Фільтрів"/>
+            <TextBox x:Name="FilerValueName" Height="28" HorizontalAlignment="Right" Width="166"/>
+            <Button x:Name="AddValue" Content="AddValue" Click="AddValue_Click"></Button>
         </StackPanel>
 
     </Grid>

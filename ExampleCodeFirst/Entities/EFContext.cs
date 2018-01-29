@@ -21,7 +21,9 @@ namespace ExampleCodeFirst.Entities
         public DbSet<Filters> Filters { get; set; }
         public DbSet<FilterName> FilterName { get; set; }
         public DbSet<FilterValue> FilterValue { get; set; }
+        public DbSet<Product> Products { get; set; }
 
+        public DbSet<Categories> Categories { get; set; }
 
     }
 }

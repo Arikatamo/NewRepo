@@ -5,11 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyEntityFramework"
         mc:Ignorable="d"
-        Title="AddStatuses" Height="187.786" Width="300">
+        Title="AddStatuses" Height="341.221" Width="504.962">
     <Grid>
-        <TextBox x:Name="Status" HorizontalAlignment="Left" Height="23" Margin="75,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="AddStatus" Content="Add" HorizontalAlignment="Left" Margin="101,86,0,0" VerticalAlignment="Top" Width="75" Click="AddStatus_Click"/>
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="75,12,0,0" VerticalAlignment="Top"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="53"/>
+            <RowDefinition Height="47"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="98*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="359*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="Status" HorizontalAlignment="Left" Height="23" Margin="10,21,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <Button x:Name="AddStatus" Content="Add" Click="AddStatus_Click" Grid.Row="2"/>
+        <Button x:Name="Change" Content="ChangeStatus" Grid.Row="4" Click="Change_Click"/>
+        <Button x:Name="DelleStatuses" Content="Delete" Click="DelleStatuses_Click" Grid.Row="3"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <DataGrid x:Name="StausesGrid" Grid.Column="1" Grid.RowSpan="6" SelectedCellsChanged="StausesGrid_SelectedCellsChanged" IsReadOnly="True"/>
     </Grid>
 </Window>

@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Cart.cs" />
+    <Compile Include="Entities\Categories.cs" />
     <Compile Include="Entities\EFContext.cs" />
     <Compile Include="Entities\FilterName.cs" />
     <Compile Include="Entities\Filters.cs" />
@@ -75,6 +76,18 @@
     <Compile Include="Migrations\201801251729561_Add table Filters.Designer.cs">
       <DependentUpon>201801251729561_Add table Filters.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801260746107_add tbl Categories.cs" />
+    <Compile Include="Migrations\201801260746107_add tbl Categories.Designer.cs">
+      <DependentUpon>201801260746107_add tbl Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801260750161_add tbl Categories+Product.cs" />
+    <Compile Include="Migrations\201801260750161_add tbl Categories+Product.Designer.cs">
+      <DependentUpon>201801260750161_add tbl Categories+Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801281126349_add tbl Nulable.cs" />
+    <Compile Include="Migrations\201801281126349_add tbl Nulable.Designer.cs">
+      <DependentUpon>201801281126349_add tbl Nulable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +110,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801251729561_Add table Filters.resx">
       <DependentUpon>201801251729561_Add table Filters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801260746107_add tbl Categories.resx">
+      <DependentUpon>201801260746107_add tbl Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801260750161_add tbl Categories+Product.resx">
+      <DependentUpon>201801260750161_add tbl Categories+Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801281126349_add tbl Nulable.resx">
+      <DependentUpon>201801281126349_add tbl Nulable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

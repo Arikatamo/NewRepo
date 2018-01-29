@@ -20,6 +20,9 @@ namespace ExampleCodeFirst.Entities
         public float Price { get; set; }
         public DateTime DateCreate { get; set; }
         public ICollection<Filters> Filters { get; set; }
+        [ForeignKey("CategoriesID")]
+        public int CategoryId { get; set; }
+        public virtual Categories CategoriesID { get; set; }
 
     }
 }

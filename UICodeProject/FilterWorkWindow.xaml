@@ -1,0 +1,39 @@
+﻿<Controls:MetroWindow x:Class="UICodeProject.FilterWorkWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UICodeProject"
+        mc:Ignorable="d"
+        Title="FilterWorkWindow" Height="314.885" Width="456.87">
+    <Grid Loaded="Grid_Loaded">
+        <TextBox x:Name="txtFilterName" HorizontalAlignment="Left" Height="23" Margin="10,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Назва Фільтру" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddFilter" 
+                Content="Додати" 
+                HorizontalAlignment="Left"
+                Margin="135,40,0,0" 
+                VerticalAlignment="Top" 
+                Width="75" 
+                Height="23" Click="btnAddFilter_Click"/>
+        <TreeView x:Name="TreeViewFilterName"
+             
+                  HorizontalAlignment="Left"
+                  Height="193" 
+                  Margin="10,81,0,0" 
+                  VerticalAlignment="Top" Width="200"/>
+        <TextBox x:Name="txtFilterValue" HorizontalAlignment="Left" Height="23" Margin="224,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Значення Фільтру" HorizontalAlignment="Left" Margin="224,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddValue" 
+            Content="Додати" 
+            HorizontalAlignment="Left"
+            Margin="349,40,0,0" 
+            VerticalAlignment="Top" 
+            Width="75" 
+            Height="23" Click="btnAddValue_Click"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="302,168,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="349,138,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click"/>
+
+    </Grid>
+</Controls:MetroWindow>

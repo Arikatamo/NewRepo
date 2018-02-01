@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExampleCodeFirst.Entities.Views.FiltersView;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace ExampleCodeFirst.Entities
         {
                 
         }
+        #region tables
         public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<OrderStatus> OrderStatus { get; set; }
@@ -22,8 +24,13 @@ namespace ExampleCodeFirst.Entities
         public DbSet<FilterName> FilterName { get; set; }
         public DbSet<FilterValue> FilterValue { get; set; }
         public DbSet<Product> Products { get; set; }
-
+        public DbSet<FilterNameGroups> FilterNameGroups { get; set; }
         public DbSet<Categories> Categories { get; set; }
 
+        #endregion
+
+        #region View
+        public DbSet<vFilterNameGroup> vFilterNameGroup { get; set; }
+        #endregion  
     }
 }

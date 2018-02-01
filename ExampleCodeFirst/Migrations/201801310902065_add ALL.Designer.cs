@@ -7,13 +7,13 @@ namespace ExampleCodeFirst.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addtblNulable : IMigrationMetadata
+    public sealed partial class addALL : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addtblNulable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addALL));
         
         string IMigrationMetadata.Id
         {
-            get { return "201801281126349_add tbl Nulable"; }
+            get { return "201801310902065_add ALL"; }
         }
         
         string IMigrationMetadata.Source

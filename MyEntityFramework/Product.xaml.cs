@@ -44,19 +44,15 @@ namespace MyEntityFramework
 
         private void AddProduct_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+  
                 using (EFContext context = new EFContext())
                 {
                     context.Products.Add(new ExampleCodeFirst.Entities.Product() { Name = ProductName.Text, Price = int.Parse(ProductPrice.Text), Quantity = int.Parse(ProductQuantity.Text), DateCreate = new DateTime(), CategoriesID = context.Categories.First(x => x.Name == Category.SelectedValue.ToString()) });
+                    context.SaveChanges();
+                    ProductGrid.ItemsSource = context.Products.ToList();
                 }
 
-            }
-            catch (Exception)
-            {
-
-                //  throw;
-            }
+ 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -76,8 +72,6 @@ namespace MyEntityFramework
                         context.Categories.Add(new Categories() { Name = CategoryName.Text, IsHead = (bool)IsHeadCheker.IsChecked});
 
                     }
-
-
                     context.SaveChanges();
                     Category.ItemsSource = context.Categories.Select(x => x.Name).ToList();
                     SubCategory.ItemsSource = context.Categories.Select(x => x.Name).ToList();
